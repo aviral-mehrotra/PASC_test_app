@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAB3088E29003F1700133BC1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3088D29003F1700133BC1 /* Coordinator.swift */; };
 		BAE1658428E48357007B29B8 /* PASC_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1658328E48357007B29B8 /* PASC_testApp.swift */; };
 		BAE1658628E48357007B29B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1658528E48357007B29B8 /* ContentView.swift */; };
 		BAE1658828E4835A007B29B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE1658728E4835A007B29B8 /* Assets.xcassets */; };
 		BAE1658B28E4835A007B29B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE1658A28E4835A007B29B8 /* Preview Assets.xcassets */; };
+		BAFA22BB28FF95530078D8A4 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFA22BA28FF95530078D8A4 /* CounterView.swift */; };
+		BAFA22BD28FF956B0078D8A4 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFA22BC28FF956B0078D8A4 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BAB3088D29003F1700133BC1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BAE1658028E48357007B29B8 /* PASC-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PASC-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE1658328E48357007B29B8 /* PASC_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PASC_testApp.swift; sourceTree = "<group>"; };
 		BAE1658528E48357007B29B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BAE1658728E4835A007B29B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAE1658A28E4835A007B29B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BAFA22BA28FF95530078D8A4 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		BAFA22BC28FF956B0078D8A4 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				BAE1658328E48357007B29B8 /* PASC_testApp.swift */,
 				BAE1658528E48357007B29B8 /* ContentView.swift */,
+				BAFA22BA28FF95530078D8A4 /* CounterView.swift */,
+				BAFA22BC28FF956B0078D8A4 /* CameraView.swift */,
+				BAB3088D29003F1700133BC1 /* Coordinator.swift */,
 				BAE1658728E4835A007B29B8 /* Assets.xcassets */,
 				BAE1658928E4835A007B29B8 /* Preview Content */,
 			);
@@ -139,6 +148,9 @@
 			files = (
 				BAE1658628E48357007B29B8 /* ContentView.swift in Sources */,
 				BAE1658428E48357007B29B8 /* PASC_testApp.swift in Sources */,
+				BAB3088E29003F1700133BC1 /* Coordinator.swift in Sources */,
+				BAFA22BB28FF95530078D8A4 /* CounterView.swift in Sources */,
+				BAFA22BD28FF956B0078D8A4 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +284,8 @@
 				DEVELOPMENT_TEAM = CG9276D75N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is needed to upload photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo library access is needed to upload photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +316,8 @@
 				DEVELOPMENT_TEAM = CG9276D75N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is needed to upload photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo library access is needed to upload photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
