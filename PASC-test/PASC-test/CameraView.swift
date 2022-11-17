@@ -14,6 +14,13 @@ struct CameraView: View {
     
     @State var image: Image? = nil
     @State var showCaptureImageView: Bool = false
+    @State var delayTriggered: Bool = false
+    
+    private func delay() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            delayTriggered = true
+        }
+    }
     
     var body: some View {
         
@@ -21,15 +28,23 @@ struct CameraView: View {
             VStack {
                 Button(action: {
                     self.showCaptureImageView.toggle()
+                    delay()
                 }) {
                     Text("Choose photos")
                 }
-                image?
-                    .resizable()
-                    .frame(width: 250, height: 250)
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                    .shadow(radius: 10)
+                GeometryReader { geometry in
+                    
+                    image?
+                        .resizable() /// this modifier allows the image to be resized
+                        .frame(width: 250, height: 250) /// the frame modifier sets the dimensions of the image to the desired pixel amounts
+                        .clipShape(Circle()) /// this modifier changes the shape of the image to be a circle
+                        /// the .scaledToFit() can be used to keep the original aspect ratio of the image
+                        .overlay(Circle().stroke(Color.white, lineWidth: 4)) /// this modifier adds a circle border around the image
+                        .shadow(radius: 10)
+                        .onTapGesture {
+                            print("\(Int(geometry.size.width)) x \(Int(geometry.size.height))") /// prints the dimensions of the image view (including extra space on the x and y axes)
+                        }
+                }
             }
             
             if (showCaptureImageView) {
